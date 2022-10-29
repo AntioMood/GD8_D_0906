@@ -7,7 +7,7 @@ import org.osmdroid.views.overlay.infowindow.InfoWindow
 
 class CustomInfoWindow(mapView: MapView?) : InfoWindow(R.layout.layout_tooltip, mapView) {
     override fun onClose() {
-//        do nothing
+
     }
 
     override fun onOpen(item: Any) {
@@ -20,7 +20,7 @@ class CustomInfoWindow(mapView: MapView?) : InfoWindow(R.layout.layout_tooltip, 
 
         tvNamaLokasi.text = infoWindowData.strName
         tvAlamat.text = infoWindowData.strVicinity
-        imageClose.setOnClickListener(){
+        imageClose.setOnClickListener {
             marker.closeInfoWindow()
         }
     }
